@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="list" />
+
+    <cn.gavinliu.SlidingFilterPanel.SlidingFilterPanel
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:text="@string/text_content" />
+
+            <TextView
+                android:id="@+id/handle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#999"
+                android:gravity="center"
+                android:text="@string/text_hide"
+                android:textColor="#FFF" />
+
+            <View
+                android:id="@+id/edge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shadow_bottom" />
+        </LinearLayout>
+    </cn.gavinliu.SlidingFilterPanel.SlidingFilterPanel>
+
+</FrameLayout>
